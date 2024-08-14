@@ -1,30 +1,25 @@
- document.addEventListener('DOMContentLoaded', function() {
-        const items = document.querySelectorAll('.accordion-item');
+$(document).ready(function() {
+    const items = $('.accordion-item');
 
-        items.forEach(item => {
-            item.addEventListener('click', function() {
-                // Toggle the active class
-                const body = this.lastElementChild;
+    items.on('click', function() {
+        const body = $(this).find('.accordion-body').first();
 
-                
-                // Slide up all other accordion bodies
-                document.querySelectorAll('.accordion-body').forEach(b => {
-                    if (b !== body) {
-                        b.classList.remove('open');
-                        b.style.maxHeight = null;
-                    }
-                });
-
-                // Slide down the clicked accordion body
-                if (body.classList.contains('open')) {
-                    body.classList.remove('open');
-                    body.style.maxHeight = null;
-                    this.querySelector('.align-right').innerText = '▼';
-                } else {
-                    body.classList.add('open');
-                    body.style.maxHeight = body.scrollHeight + 'px';
-                    this.querySelector('.align-right').innerText = '▲';
-                }
-            });
+        $('.accordion-body').not(body).each(function() {
+            $(this).removeClass('open')
+                   .css('maxHeight', null)
+                   .siblings('.accordion-header')
+                   .find('.align-right')
+                   .text('▼');
         });
+
+        if (body.hasClass('open')) {
+            body.removeClass('open')
+                .css('maxHeight', null);
+            $(this).find('.align-right').first().text('▼');
+        } else {
+            body.addClass('open')
+                .css('maxHeight', body.prop('scrollHeight') + 'px');
+            $(this).find('.align-right').first().text('▲');
+        }
     });
+});

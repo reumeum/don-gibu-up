@@ -4,35 +4,12 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<!-- 게시판 글상세 시작 -->
-<!DOCTYPE html>
-<html lang="ko">
-<meta charset="UTF-8">
-<title>게시판 글상세</title>
+
 <script src="${pageContext.request.contextPath}/js/jquery-3.7.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/videoAdapter.js"></script>
 <script src="${pageContext.request.contextPath}/js/category/category.js"></script>
 <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/category.css"
-	type="text/css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/reg_pay.css"
-	type="text/css">
-<title>Subscription Form</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-	crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-	crossorigin="anonymous"></script>
-</head>
 <img
 	src="${pageContext.request.contextPath}/upload/${category.dcate_banner}"
 	id="banner" width="100%;">
@@ -288,5 +265,4 @@
 		</div>
 	</div>
 </div>
-</html>
 
