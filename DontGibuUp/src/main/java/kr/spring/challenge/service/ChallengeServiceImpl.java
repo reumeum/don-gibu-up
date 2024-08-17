@@ -14,6 +14,7 @@ import javax.annotation.PostConstruct;
 import javax.servlet.ServletContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,7 +38,6 @@ import kr.spring.notify.service.NotifyService;
 import kr.spring.notify.vo.NotifyVO;
 import kr.spring.point.service.PointService;
 import kr.spring.point.vo.PointVO;
-import kr.spring.util.FileUtil;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -60,10 +60,12 @@ public class ChallengeServiceImpl implements ChallengeService{
 
 	//IamportClient 초기화 하기
 	private IamportClient impClient; 
-
-	private String apiKey = "7830478768772156";
-	private String secretKey = "T5qKYEXltMHNhzZaGSBZYQ4iYQ2Woor1VleODHJ2mhXZ4FBma0OA2e0Z4XSj3CNYY4ZPk4XBy4naYmla";
-
+	
+	@Value("${c_iamport.apiKey}")
+	private String apiKey;
+	@Value("${c_iamport.secretKey}")
+	private String secretKey;
+	
 	@PostConstruct
 	public void initImp() {
 		this.impClient = new IamportClient(apiKey,secretKey);

@@ -80,4 +80,11 @@ iamport:
   apiKey: "2501776226527075"
   secretKey: "qpZRCTf52Ldmm3eOgJwXu8lVk80JNJLszHOVhk9onjhCwSaUxMh2neAOtQmZcniVoveOdlaHBMtYX5Er"
 
+c_iamport:
+  apiKey: "7830478768772156"
+  secretKey: "T5qKYEXltMHNhzZaGSBZYQ4iYQ2Woor1VleODHJ2mhXZ4FBma0OA2e0Z4XSj3CNYY4ZPk4XBy4naYmla"
+  
+d_iamport:
+  apiKey: "1768802126155655"
+  secretKey: "7lbuqivNTuXgdJ0ELcC9KH7mo8ruzxAQz6i7NEw72bobO7JIPfH8I07YSYcQUmPypmQg0S3H9XxqM9wQ"
 

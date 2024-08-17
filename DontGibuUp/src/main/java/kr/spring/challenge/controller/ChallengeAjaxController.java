@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -315,9 +316,11 @@ public class ChallengeAjaxController {
 	//IamportClient 초기화 하기
 	private IamportClient impClient; 
 
-	private String apiKey = "7830478768772156";
-	private String secretKey = "T5qKYEXltMHNhzZaGSBZYQ4iYQ2Woor1VleODHJ2mhXZ4FBma0OA2e0Z4XSj3CNYY4ZPk4XBy4naYmla";
-
+	@Value("${c_iamport.apiKey}")
+	private String apiKey;
+	@Value("${c_iamport.secretKey}")
+	private String secretKey;
+	
 	@PostConstruct
 	public void initImp() {
 		this.impClient = new IamportClient(apiKey,secretKey);
