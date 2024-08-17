@@ -1,7 +1,5 @@
 # 돈기부업 (Don Gibu Up)
 
-![돈기부업 가로형 로고](https://prod-files-secure.s3.us-west-2.amazonaws.com/621b3c2b-96c7-4aa6-aaee-59def634f55a/ce696c2a-bab4-4810-953c-a3e7cd8abeba/%EB%8F%88%EA%B8%B0%EB%B6%80%EC%97%85_%EA%B0%80%EB%A1%9C%ED%98%95_%EB%A1%9C%EA%B3%A0.png)
-
 ## 📖 What We Made
 
 > *기부가 쉬워지는 마법, 돈기부업 Don Gibu Up*
@@ -41,18 +39,3 @@
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- **Java JDK 1.8+**
-- **Apache Tomcat 9.0+**
-- **Oracle Database** (설치 및 설정이 필요합니다)
-- **Eclipse IDE** (또는 원하는 Java IDE)
-
-### Installation & Setup
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/yourusername/don-gibu-up.git
-   cd don-gibu-up
