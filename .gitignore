@@ -1,4 +1,4 @@
-#Spring
+# Spring
 target/
 bin/
 
@@ -6,9 +6,7 @@ bin/
 *.class
 
 # Log file
-*.log
-
-# BlueJ files
+*.log# BlueJ files
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
@@ -26,3 +24,6 @@ bin/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Ignore application.yml
+application.yml
